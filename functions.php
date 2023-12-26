@@ -211,7 +211,7 @@ add_action('wp_dashboard_setup', 'wp_custom_dashboard_widget');
 
 function custom_dashboard_widget_content() {
 	echo '<p>Esse painel tem informações importantes de contato. Caso tenha alguma dúvida, você pode acessar este canal:<br/><br/>
-	<strong> Site pessoal:</strong> <a target="_blank"href="https://luisborges.dev/"> Luis Borges</a>.</p>';
+	<strong> Site pessoal:</strong> <a target="_blank"href="https://luisborges.dev/"> Luis Borges!</a>.</p>';
 }
 
 // Limita o tipo de informações do Login ao ser recusado
