@@ -211,9 +211,9 @@ add_action('wp_dashboard_setup', 'wp_custom_dashboard_widget');
 
 function custom_dashboard_widget_content() {
 	echo '<p>Esse painel tem informações importantes de contato. Caso tenha alguma dúvida, você pode acessar estes canais:<br/><br/>
-	<a target="_blank"href="https://luisborges.dev/"> Luis Borges</a>
+	Site pessoal: <a target="_blank"href="https://luisborges.dev/"> Luis Borges</a>
 	<br />
-	<strong>E-mail de Suporte:</strong> <a href="mailto:luisborgesdesigner@gmail.com">luisborgesdesigner@gmail.com</a>.</p>';
+	<strong>E-mail de Suporte:</strong> <a href="mailto:luisborgesdesigner@gmail.com">Enviar e-mail</a>.</p>';
 }
 
 
