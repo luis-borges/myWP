@@ -199,12 +199,23 @@ function page_tagcat_settings() {
 remove_action( 'wp_head', 'wlwmanifest_link');
 
 // Criando Painel Personalizado
-function wp_custom_dashboard() {
-	echo '<p>Esse painel tem informações importantes de contato. Caso tenha alguma dúvida, você pode acessar estes canais:<br/><br/>
-	<strong>Google Chat:</strong> <a target="_blank"href="https://mail.google.com/mail/u/0/#chat/welcome"> Luis Borges</a>
-	<br />
-	<strong>E-mail de Suporte:</strong> <a href="mailto:luis.borgesa@estrategia.com">luis.borges@estrategia.com</a>.</p>';
+
+function wp_custom_dashboard_widget() {
+	wp_add_dashboard_widget(
+		'custom_dashboard_widget',         // ID do widget
+		'Informações de Contato',          // Título do widget
+		'custom_dashboard_widget_content'  // Função que gera o conteúdo do widget
+	);
 }
+add_action('wp_dashboard_setup', 'wp_custom_dashboard_widget');
+
+function custom_dashboard_widget_content() {
+	echo '<p>Esse painel tem informações importantes de contato. Caso tenha alguma dúvida, você pode acessar estes canais:<br/><br/>
+	<a target="_blank"href="https://luisborges.dev/"> Luis Borges</a>
+	<br />
+	<strong>E-mail de Suporte:</strong> <a href="mailto:luisborgesdesigner@gmail.com">luisborgesdesigner@gmail.com</a>.</p>';
+}
+
 
 /**
  * Register pattern categories.
