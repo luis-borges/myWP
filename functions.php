@@ -208,3 +208,11 @@ add_action( 'init', 'twentytwentyfour_pattern_categories' );
 // Remove a versão do WordPress do cabeçalho
 remove_action('wp_head', 'wp_generator');
 add_filter ('the_generator', 'site_remove_version');
+
+// Criando Painel Personalizado
+function wp_custom_dashboard() {
+	echo '<p>Esse painel tem informações importantes de contato. Caso tenha alguma dúvida, você pode acessar estes canais:<br/><br/>
+	<strong>Google Chat:</strong> <a target="_blank"href="https://mail.google.com/mail/u/0/#chat/welcome"> Luis Borges</a>
+	<br />
+	<strong>E-mail de Suporte:</strong> <a href="mailto:luis.borgesa@estrategia.com">luis.borges@estrategia.com</a>.</p>';
+}
