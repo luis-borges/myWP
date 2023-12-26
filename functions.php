@@ -184,6 +184,20 @@ add_action( 'init', 'twentytwentyfour_block_stylesheets' );
 remove_action('wp_head', 'wp_generator');
 add_filter ('the_generator', 'site_remove_version');
 
+
+// Adiciona Categoria as Páginas
+function page_tagcat_settings() {
+    // Add tag metabox to page
+    // register_taxonomy_for_object_type('post_tag', 'page');
+    // Add category metabox to page
+    register_taxonomy_for_object_type('category', 'page');
+    }
+    // Add to the admin_init hook of your theme functions.php file
+    add_action( 'init', 'page_tagcat_settings' );
+
+// Remove wlwmanifest_link - Recurso usado pelo Windows Live Writer. 
+remove_action( 'wp_head', 'wlwmanifest_link');
+
 // Criando Painel Personalizado
 function wp_custom_dashboard() {
 	echo '<p>Esse painel tem informações importantes de contato. Caso tenha alguma dúvida, você pode acessar estes canais:<br/><br/>
