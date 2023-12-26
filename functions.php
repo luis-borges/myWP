@@ -204,3 +204,7 @@ if ( ! function_exists( 'twentytwentyfour_pattern_categories' ) ) :
 endif;
 
 add_action( 'init', 'twentytwentyfour_pattern_categories' );
+
+// Remove a versão do WordPress do cabeçalho
+remove_action('wp_head', 'wp_generator');
+add_filter ('the_generator', 'site_remove_version');
