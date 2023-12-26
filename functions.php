@@ -214,6 +214,11 @@ function custom_dashboard_widget_content() {
 	<strong> Site pessoal:</strong> <a target="_blank"href="https://luisborges.dev/"> Luis Borges</a>.</p>';
 }
 
+// Limita o tipo de informações do Login ao ser recusado
+function failed_login() {
+	return 'Seu usuário ou senha informados estão incorretos.'; 
+  }
+  add_filter( 'login_errors', 'failed_login' );
 
 /**
  * Register pattern categories.
