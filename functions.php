@@ -214,6 +214,8 @@ function custom_dashboard_widget_content() {
 	<strong> Site pessoal:</strong> <a target="_blank"href="https://luisborges.dev/"> Luis Borges</a>.</p>';
 }
 
+add_filter( 'big_image_size_threshold', '__return_false' );
+
 // Limita o tipo de informações do Login ao ser recusado
 function failed_login() {
 	return 'Seu usuário ou senha informados estão incorretos.'; 
